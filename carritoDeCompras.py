@@ -3,3 +3,5 @@ class Producto():
         self.__nombre = nombre
         self.__precio = precio
         print(f"Producto creado: {nombre} ${precio}")
+        
+    
