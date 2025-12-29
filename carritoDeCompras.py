@@ -1,3 +1,8 @@
+
+#==============#
+# COLABORACION #
+#==============#
+
 class Producto():
     def __init__(self, nombre, precio):
         self.__nombre = nombre
@@ -8,7 +13,7 @@ class Producto():
     def get_nombre(self):
         return self.__nombre
     
-    def fet_precio(self):
+    def get_precio(self):
         return self.__precio
     
     #===SETTERS
@@ -28,8 +33,8 @@ class Producto():
 
 class Carrito():
     def __init__(self, dueno):
-        self.dueno = dueno
-        self.productos = []
+        self.__dueno = dueno
+        self.__productos = []
         print("Carrito creado para ", dueno)
 
 
@@ -38,7 +43,7 @@ class Carrito():
         return self.__dueno
     
     def get_productos(self):
-        return self.get_producto
+        return self.__productos
     
     #===SETTERS
     def set_dueno(self, nuevo_dueno):
@@ -58,7 +63,7 @@ class Carrito():
     #calcular total
     def calcular_total(self):
         precio_total=0
-        for item in self.productos():
+        for item in self.__productos:
             precio_total+=item.get_precio()
         return precio_total
     
